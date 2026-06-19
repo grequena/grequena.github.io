@@ -118,9 +118,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -384,7 +384,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmF5ZXNpYW5v">bayesiano <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29wYSUyMGRvJTIwbXVuZG8=">copa do mundo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZnV0ZWJvbA==">futebol <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -416,7 +416,40 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Y29wYSUyMGRvJTIwbXVuZG8lMkNiYXllc2lhbm8lMkNmdXRlYm9sJTJDUg==" data-listing-date-sort="1781838000000" data-listing-file-modified-sort="1781897162767" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1340">
+<div class="thumbnail"><a href="./posts/simulacao-copa-2026/index.html" class="no-external">
 
+<img loading="lazy" src="./posts/simulacao-copa-2026/images/post1_classificacao_barra.svg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/simulacao-copa-2026/index.html" class="no-external">Modelo Estatístico não vê Brasil em risco na fase de grupos.</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29wYSUyMGRvJTIwbXVuZG8='); return false;">copa do mundo</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmF5ZXNpYW5v'); return false;">bayesiano</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZnV0ZWJvbA=='); return false;">futebol</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/simulacao-copa-2026/index.html" class="no-external">
+Hoje às 21:30 (horário de Brasília) tem jogo do Brasil, contra o Haiti, e as desconfianças tomam conta da mídia e das conversas de bar. A estreia contra o Marrocos não…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/simulacao-copa-2026/index.html" class="no-external">
+<div class="listing-date">
+19 de jun. de 2026
+</div>
+<div class="listing-reading-time">7 minutos</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">Nenhum item correspondente</div>
 </div></main> <!-- /main -->
@@ -891,7 +924,7 @@ window.Quarto = {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  type: default</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date desc"</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: true</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [date, title, description, categories, reading-time]</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [image, date, title, description, categories, reading-time]</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  feed: true</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>

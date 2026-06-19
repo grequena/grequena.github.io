@@ -119,9 +119,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -418,7 +418,39 @@ Chutes da Copa de 2022: cada linha é uma seleção, distribuída ao longo dos m
 <h2 class="anchored" data-anchor-id="mais-recentes">Mais recentes</h2>
 <div id="listing-recentes" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Y29wYSUyMGRvJTIwbXVuZG8lMkNiYXllc2lhbm8lMkNmdXRlYm9sJTJDUg==" data-listing-date-sort="1781838000000" data-listing-file-modified-sort="1781897162767" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1340">
+<div class="thumbnail"><a href="./posts/simulacao-copa-2026/index.html" class="no-external">
 
+<img loading="lazy" src="./posts/simulacao-copa-2026/images/post1_classificacao_barra.svg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/simulacao-copa-2026/index.html" class="no-external">Modelo Estatístico não vê Brasil em risco na fase de grupos.</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29wYSUyMGRvJTIwbXVuZG8='); return false;">copa do mundo</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmF5ZXNpYW5v'); return false;">bayesiano</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZnV0ZWJvbA=='); return false;">futebol</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/simulacao-copa-2026/index.html" class="no-external">
+Hoje às 21:30 (horário de Brasília) tem jogo do Brasil, contra o Haiti, e as desconfianças tomam conta da mídia e das conversas de bar. A estreia contra o Marrocos não…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/simulacao-copa-2026/index.html" class="no-external">
+<div class="listing-date">
+19 jun 2026
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">Nenhum item correspondente</div>
 </div>
@@ -906,7 +938,7 @@ Chutes da Copa de 2022: cada linha é uma seleção, distribuída ao longo dos m
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  type: default</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  max-items: 3</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date desc"</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [title, date, description, categories]</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [image, title, date, description, categories]</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">  date-format: "DD MMM YYYY"</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
