@@ -44,7 +44,7 @@
 <p>O modelo é categórico em afirmar que o Brasil é <strong>amplo favorito</strong>. A chance de vitória é de <strong>83%</strong>, contra 12% de empate e apenas 5% de vitória do Haiti. Não é surpresa: o Brasil ataca muito mais e defende muito melhor, no geral. Mas 17% de empate ou derrota assusta — em 100 jogos, o Brasil deixaria de ganhar 17 deles, aproximadamente. O gráfico a seguir mostra um panorama mais completo do placar.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_placar_agrupado_haiti.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+<p><a href="images/post1_placar_agrupado_haiti.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_placar_agrupado_haiti.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
 <p>Repare na assimetria. As barras do Haiti são puxadas para o zero (61% de chance de não marcar), enquanto o Brasil espalha seus gols: pode fazer 1, 2, 3, 4, 5… com chances relativamente parecidas. Não é só que o Brasil marca mais — ele é mais <strong>imprevisível</strong> no placar (mas marca pelo menos 1 gol com ~92% de chance). Cabe ressaltar que este gráfico não reflete apenas a frequência de gols nas partidas anteriores: ele se baseia na força de ataque e na solidez defensiva estimadas pelo modelo.</p>
@@ -55,7 +55,7 @@
 <p>O segundo jogo do Brasil é contra a Escócia, e o favoritismo continua — mas agora um pouco menor, o que mostra que o modelo está coerente com nossa intuição de futebolista de botequim (a Escócia é melhor que o Haiti). O modelo dá <strong>71% de vitória</strong> ao Brasil, 19% de empate e 10% para a Escócia. A Escócia é um adversário mais duro que o Haiti: defende melhor e tem mais chances de marcar. Agora, a cada 10 jogos, o Brasil deixaria de ganhar aproximadamente 3!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_placar_agrupado_scotland.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+<p><a href="images/post1_placar_agrupado_scotland.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_placar_agrupado_scotland.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
 <p>O padrão se repete: o Brasil espalha seus gols, a Escócia se concentra nos números baixos. Os placares mais prováveis são <strong>2 x 0</strong> (~15%), <strong>1 x 0</strong> (~15%) e 3 x 0 (~10%). O Brasil ainda deve vencer, mas a Escócia tende a tornar o placar mais magro.</p>
@@ -66,7 +66,7 @@
 <p>Nos dois jogos que ainda faltam envolvendo essas seleções, o <strong>Marrocos é favorito</strong> em ambos. O gráfico abaixo mostra as probabilidades obtidas pelo modelo nos próximos confrontos do grupo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_ved_confrontos.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+<p><a href="images/post1_ved_confrontos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_ved_confrontos.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
 <p>Ou seja, o modelo enxerga o Marrocos como a <strong>segunda força do grupo</strong>, atrás só do Brasil — como alguns especialistas já apontavam antes da Copa. Mas será que o modelo tem razão?</p>
@@ -77,7 +77,7 @@
 <p>O modelo erraria se a gente o usasse para dar um único chute de placar — ele não cravou o resultado (dava ~13% para o 1 x 1 exato). Mas apontou que seria um jogo duro e que o empate era um resultado bem possível: a probabilidade estimada de o Brasil <strong>não</strong> vencer era de 55% (e o Brasil não venceu). Um modelo honesto não adivinha o futuro — ele calibra as probabilidades.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_placar_agrupado_morocco.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+<p><a href="images/post1_placar_agrupado_morocco.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_placar_agrupado_morocco.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
 <p>Isso explica também por que a estreia ruim do Brasil não abalou as previsões do modelo: um Brasil x Marrocos apertado nunca foi surpresa para ele. O empate apenas confirmou o que já indicava — que o Marrocos atual é um adversário de respeito, e não um tropeço pontual do Brasil.</p>
@@ -87,7 +87,7 @@
 <p>Agora junto tudo. Combinei as forças das quatro seleções e simulei 10.000 vezes, via Monte Carlo, o que falta do grupo, obtendo estimativas para a probabilidade de cada time terminar em cada posição.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_classificacao_barra.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+<p><a href="images/post1_classificacao_barra.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://grequena.github.io/posts/simulacao-copa-2026/images/post1_classificacao_barra.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
 <p>O Brasil lidera com folga: <strong>88% de chance de classificação direta</strong> (terminar em 1º ou 2º). Alguns se surpreenderiam, outros não. O ponto curioso está logo abaixo: <strong>a Escócia lidera o grupo neste momento</strong> — venceu o Haiti na estreia e soma 3 pontos, dois a mais que o Marrocos. E, mesmo assim, o modelo aposta que é a Escócia quem fica de fora da classificação direta: ela deve sair derrotada dos seus dois próximos jogos (Marrocos e Brasil), enquanto o Marrocos ainda enfrenta o Haiti, provável vitória. A tabela de hoje é uma fotografia; o modelo aposta no filme inteiro.</p>
