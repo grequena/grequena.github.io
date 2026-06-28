@@ -10,7 +10,144 @@
 <atom:link href="https://grequena.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Estatística &amp; Ciência de Dados</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Fri, 19 Jun 2026 03:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 28 Jun 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Poder ofensivo e solidez defensiva dos times da Copa</title>
+  <dc:creator>Guaraci Requena</dc:creator>
+  <link>https://grequena.github.io/posts/forcas-grupos-copa-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<style>
+/* Capitular (drop cap) — primeira letra grande no 1º parágrafo, estilo revista */
+.dropcap p::first-letter {
+  float: left;
+  font-size: 3.6em;
+  line-height: 0.8;
+  font-weight: 400;
+  padding: 0.02em 0.10em 0 0;
+}
+</style>
+<div class="dropcap">
+<p>Terminou a 3ª e última rodada da fase de grupos da Copa do Mundo 2026 de futebol masculino. E, enquanto seleções badaladas como Espanha, Argentina e França confirmaram o favoritismo, azarões como Cabo Verde (liderado pelo goleiro Vozinha), Bósnia e Herzegovina e Gana, entre outras, chamaram atenção.</p>
+</div>
+<p>Desde o início desta Copa, tenho ajustado um modelo de Machine Learning, que estima as forças ofensivas e defensivas de cada seleção, baseado em dados históricos. Fiz um recorte com dados desde 2010, mas, como sabemos, futebol não é só tradição e peso da camisa, é momento; então incluí no ajuste (na verossimilhança) um peso de meia-vida, que dá mais importância a jogos mais recentes. Além disso, calculei o ranking Elo ao longo do tempo — pensado inicialmente para classificar enxadristas, hoje utilizado pela FIFA —, que dá pesos maiores a jogos mais importantes (Copa &gt; eliminatórias &gt; amistoso). Parti de prioris pouco informativas, que não favoreciam nenhum time; ou seja, os resultados a posteriori são baseados principalmente nos dados, mas a perspectiva bayesiana possibilita interpretações mais diretas.</p>
+<p>O modelo, depois de ajustado, permite tirar várias conclusões. Podemos simular centenas de milhares de partidas e calcular quantas vezes um time ganha, empata ou perde; simular placares; simular rodada a rodada até a grande campeã. Também podemos calcular quantos gols um time marca e quantos toma, em média, contra um time de Elo-FIFA hipotético. Foi o que fiz: fixei um time mediano entre as 48 que foram à Copa (Elo-FIFA = 1626, algo entre Egito (1619) e Turquia (1632)). Assim, conseguimos compreender o poderio ofensivo e defensivo e comparar as seleções. É o que o gráfico abaixo conta — aliás, ele conta a história por si só.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/painel_forcas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/painel_forcas.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="Forest plot das 48 seleções: gols marcados (verde) e sofridos (vermelho) contra o time mediano, ordenado por saldo; eliminadas sombreadas em cinza."></a></p>
+</figure>
+</div>
+<p><a href="images/painel_forcas.pdf">Baixar o painel em alta resolução (PDF)</a></p>
+<p>Os pontos marcados com triângulos apontando à direita (em verde, ataque) e à esquerda (em vermelho, defesa) são a mediana a posteriori do número médio de gols (a taxa <img src="https://latex.codecogs.com/png.latex?%5Clambda"> do Poisson), e a barra é o intervalo de credibilidade de 95%. Isto é, estimamos que o número médio de gols marcados (verde) e sofridos (vermelho) contra o time mediano está representado por esses pontos. Já o intervalo mostra a incerteza ao se fazer tal estimativa — a probabilidade a posteriori de a média estar no intervalo é de 95% —, já que o valor da média populacional de gols marcados/sofridos é, de fato, desconhecido, e teríamos que observar um número astronômico de jogos para reduzir as incertezas a quase zero. Sobreposições dos intervalos podem ser vistas, grosseiramente, como “empates técnicos”, mas o que elas revelam é a crença do modelo.</p>
+<p>Antes de uma análise mais técnica, vejamos a mais aplicada ao futebol. Os treze primeiros times — ordenados pelo saldo de gols esperado contra o time mediano (média de gols marcados − média de gols sofridos) — de fato se classificaram. Como o modelo foi ajustado com dados de antes da Copa, vemos que ele revela favoritismo. Logo em seguida, a seleção campeã do mundial de 1950, o Uruguai, foi uma decepção; e o Irã — atualmente tão forte quanto o Uruguai, apesar de menos conhecido — também decepcionou. Na parte de baixo do gráfico, vemos uma predominância maior da cor cinza, revelando o que era esperado: um número maior de desclassificados. Contudo, Bósnia, Cabo Verde, Gana, Suécia e África do Sul são os principais azarões. Frequentemente — e hipoteticamente — perderiam do time mediano (saldo negativo: linha vermelha à frente da verde), mas o futebol permite resultados improváveis, e é isso que alimenta a paixão pelo esporte.</p>
+<p>O gráfico revela outros padrões de interpretação rica. Os intervalos são menores para gols pró do que para gols sofridos. Isso se dá porque o Elo-FIFA consegue explicar bem as forças de ataque, mas não tão bem as de defesa (os números ficam para um post futuro, mais técnico). Além disso, times fortes têm intervalos maiores para gols pró, pois ora fazem goleadas em cima do time mediano, ora ganham num 1 a 0 magro; já os mais fracos têm intervalo de ataque pequeno, pois consistentemente marcam muito pouco. A mesma régua se aplica à defesa: times fortes consistentemente sofrem pouco, e os mais fracos ora são goleados pelo time mediano, ora perdem de 1 a 0. Note, ainda, o padrão em “X” formado quando conectamos os pontos: ele mostra que um time forte no ataque é, no geral, também forte na defesa — afinal, como a velha máxima do futebol nos ensina: seria a melhor defesa o ataque?</p>
+<p>Por outro lado, como a Copa funciona com esquema de grupos na fase inicial, é mais justo comparar as seleções (favoritas × azarões) dentro de cada grupo. É o que os gráficos abaixo mostram. Você pode navegar grupo a grupo, identificar padrões, enxergar os amplos favoritos e os grupos mais homogêneos e disputados. Essa tarefa de interpretar eu deixo com você.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">A</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">B</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">C</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" aria-controls="tabset-1-4" aria-selected="false" href="">D</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" aria-controls="tabset-1-5" aria-selected="false" href="">E</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" aria-controls="tabset-1-6" aria-selected="false" href="">F</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" aria-controls="tabset-1-7" aria-selected="false" href="">G</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" aria-controls="tabset-1-8" aria-selected="false" href="">H</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" aria-controls="tabset-1-9" aria-selected="false" href="">I</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" aria-controls="tabset-1-10" aria-selected="false" href="">J</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-11" aria-controls="tabset-1-11" aria-selected="false" href="">K</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-12-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-12" aria-controls="tabset-1-12" aria-selected="false" href="">L</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoA.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo A — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoB.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoB.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo B — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoC.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoC.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo C — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" aria-labelledby="tabset-1-4-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoD.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoD.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo D — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" aria-labelledby="tabset-1-5-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoE.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoE.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo E — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" aria-labelledby="tabset-1-6-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoF.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoF.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo F — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-7" class="tab-pane" aria-labelledby="tabset-1-7-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoG.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoG.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo G — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-8" class="tab-pane" aria-labelledby="tabset-1-8-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoH.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoH.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo H — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-9" class="tab-pane" aria-labelledby="tabset-1-9-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoI.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoI.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo I — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-10" class="tab-pane" aria-labelledby="tabset-1-10-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoJ.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoJ.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo J — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-11" class="tab-pane" aria-labelledby="tabset-1-11-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoK.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoK.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo K — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-12" class="tab-pane" aria-labelledby="tabset-1-12-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoL.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoL.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo L — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>copa do mundo</category>
+  <category>bayesiano</category>
+  <category>futebol</category>
+  <category>R</category>
+  <category>elo</category>
+  <guid>https://grequena.github.io/posts/forcas-grupos-copa-2026/</guid>
+  <pubDate>Sun, 28 Jun 2026 03:00:00 GMT</pubDate>
+  <media:content url="https://grequena.github.io/posts/forcas-grupos-copa-2026/images/grupoC.png" medium="image" type="image/png" height="107" width="144"/>
+</item>
 <item>
   <title>Modelo Estatístico não vê Brasil em risco na fase de grupos.</title>
   <dc:creator>Guaraci Requena</dc:creator>
@@ -98,8 +235,6 @@
 <p>Este post foi construído com ferramentas abertas e um fluxo reprodutível e transparente. O modelo foi ajustado em <strong>R</strong>, com os pacotes <code>brms</code> e <code>cmdstanr</code> (que se baseiam no <strong>Stan</strong>, o motor de inferência bayesiana por trás do modelo). Os dados vêm do repositório público <a href="https://github.com/martj42/international_results">martj42/international_results</a>. Os gráficos foram feitos em <code>ggplot2</code>, e o site é gerado em <strong>Quarto</strong>.</p>
 <p>A inteligência artificial entrou como parceira de raciocínio e programação — ajudando a discutir decisões metodológicas, revisar o código e organizar o texto. As escolhas estatísticas, a validação e a interpretação final são minhas.</p>
 
-
-<!-- -->
 
 </section>
 </section>

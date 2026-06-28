@@ -1,13 +1,15 @@
 [
   {
-    "listing": "/blog.html",
+    "listing": "/index.html",
     "items": [
+      "/posts/forcas-grupos-copa-2026/index.html",
       "/posts/simulacao-copa-2026/index.html"
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
+      "/posts/forcas-grupos-copa-2026/index.html",
       "/posts/simulacao-copa-2026/index.html"
     ]
   }
