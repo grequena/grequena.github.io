@@ -370,9 +370,9 @@ window.Quarto = {
 /* Capitular (drop cap) — primeira letra grande no 1º parágrafo, estilo revista */
 .dropcap p::first-letter {
   float: left;
-  font-size: 3.2em;
-  line-height: 0.82;
-  font-weight: 700;
+  font-size: 3.6em;
+  line-height: 0.8;
+  font-weight: 400;
   padding: 0.02em 0.10em 0 0;
 }
 </style>
@@ -383,8 +383,7 @@ window.Quarto = {
 <p>O modelo, depois de ajustado, permite tirar várias conclusões. Podemos simular centenas de milhares de partidas e calcular quantas vezes um time ganha, empata ou perde; simular placares; simular rodada a rodada até a grande campeã. Também podemos calcular quantos gols um time marca e quantos toma, em média, contra um time de Elo-FIFA hipotético. Foi o que fiz: fixei um time mediano entre as 48 que foram à Copa (Elo-FIFA = 1626, algo entre Egito (1619) e Turquia (1632)). Assim, conseguimos compreender o poderio ofensivo e defensivo e comparar as seleções. É o que o gráfico abaixo conta — aliás, ele conta a história por si só.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/painel_forcas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Poder ofensivo (▶, verde) e solidez defensiva (◁, vermelho) das 48 seleções, contra o time de Elo-FIFA mediano. Forças pré-Copa; cinza = desclassificadas."><img src="images/painel_forcas.png" class="img-fluid figure-img" alt="Forest plot das 48 seleções: gols marcados (verde) e sofridos (vermelho) contra o time mediano, ordenado por saldo; eliminadas sombreadas em cinza."></a></p>
-<figcaption>Poder ofensivo (▶, verde) e solidez defensiva (◁, vermelho) das 48 seleções, contra o time de Elo-FIFA mediano. Forças pré-Copa; cinza = desclassificadas.</figcaption>
+<p><a href="images/painel_forcas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/painel_forcas.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="Forest plot das 48 seleções: gols marcados (verde) e sofridos (vermelho) contra o time mediano, ordenado por saldo; eliminadas sombreadas em cinza."></a></p>
 </figure>
 </div>
 <p><a href="images/painel_forcas.pdf">Baixar o painel em alta resolução (PDF)</a></p>
@@ -396,40 +395,88 @@ window.Quarto = {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">D</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">E</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">F</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">G</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">H</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false" href="">I</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false" href="">J</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-11" role="tab" aria-controls="tabset-1-11" aria-selected="false" href="">K</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-12-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-12" role="tab" aria-controls="tabset-1-12" aria-selected="false" href="">L</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><a href="images/grupoA.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/grupoA.png" class="img-fluid" alt="Grupo A — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoA.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/grupoA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo A — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><a href="images/grupoB.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/grupoB.png" class="img-fluid" alt="Grupo B — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoB.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/grupoB.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo B — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p><a href="images/grupoC.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/grupoC.png" class="img-fluid" alt="Grupo C — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoC.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/grupoC.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo C — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p><a href="images/grupoD.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/grupoD.png" class="img-fluid" alt="Grupo D — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoD.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/grupoD.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo D — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<p><a href="images/grupoE.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/grupoE.png" class="img-fluid" alt="Grupo E — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoE.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/grupoE.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo E — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
-<p><a href="images/grupoF.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/grupoF.png" class="img-fluid" alt="Grupo F — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoF.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/grupoF.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo F — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
-<p><a href="images/grupoG.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/grupoG.png" class="img-fluid" alt="Grupo G — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoG.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/grupoG.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo G — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
-<p><a href="images/grupoH.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/grupoH.png" class="img-fluid" alt="Grupo H — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoH.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/grupoH.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo H — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
-<p><a href="images/grupoI.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/grupoI.png" class="img-fluid" alt="Grupo I — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoI.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/grupoI.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo I — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-10-tab">
-<p><a href="images/grupoJ.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/grupoJ.png" class="img-fluid" alt="Grupo J — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoJ.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/grupoJ.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo J — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-11-tab">
-<p><a href="images/grupoK.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/grupoK.png" class="img-fluid" alt="Grupo K — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoK.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/grupoK.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo K — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 <div id="tabset-1-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-12-tab">
-<p><a href="images/grupoL.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/grupoL.png" class="img-fluid" alt="Grupo L — poder ofensivo e solidez defensiva"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/grupoL.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/grupoL.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Grupo L — poder ofensivo e solidez defensiva"></a></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
